@@ -11,4 +11,8 @@ export default defineNuxtConfig({
       },
     },
   },
+  css: [
+    // main style
+    "@/assets/styles/main.sass",
+  ],
 });
