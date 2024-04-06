@@ -44,8 +44,10 @@ withDefaults(defineProps<IBannerSliderProps>(), {
 .swiper
   &__image
     width: 99%
-    height: 32rem
+    height: 14rem
     object-fit: cover
     border: 3px solid $black-300
     border-radius: $border-radius-lg
+    +responsive($breakpoint-md)
+      height: 32rem
 </style>
