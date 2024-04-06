@@ -57,6 +57,11 @@
 
 <script lang="ts" setup>
 import { SEO_META } from "~/constants/seoMeta";
+const nuxtApp = useNuxtApp();
+
+nuxtApp.hook("page:finish", () => {
+  window.scrollTo(0, 0);
+});
 
 definePageMeta({
   layout: "blank",
@@ -120,7 +125,7 @@ const variantButtonList = computed(() => {
 const subVariantButtonList = computed(() => {
   const selectedVariantValue = selectedVariant.value.value;
   const subVariants = data.variants.find(
-    (item) => item.code === selectedVariantValue,
+    (item) => item.code === selectedVariantValue
   ).subVariants;
 
   return subVariants.map((item) => ({
