@@ -15,7 +15,6 @@ export default defineNuxtConfig({
     // main style
     "@/assets/styles/main.sass",
   ],
-
   components: [
     // custom scanner for component auto-import
     { path: "~/components/page", prefix: "" },
@@ -24,4 +23,5 @@ export default defineNuxtConfig({
     // It's important that this comes last if you have overrides you wish to apply
     "~/components",
   ],
+  modules: ["@nuxt/image"],
 });
