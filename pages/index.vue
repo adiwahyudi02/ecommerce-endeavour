@@ -4,6 +4,7 @@
       :data="highestCommissionProducts"
       :is-loading="isLoading && !highestCommissionProducts.length"
     />
+    <Divider />
     <ProductHighestRating
       :data="highestRatingProducts"
       :is-loading="isLoading && !highestRatingProducts.length"
