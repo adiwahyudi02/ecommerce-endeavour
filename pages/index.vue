@@ -10,6 +10,7 @@
     />
     <Divider />
     <div class="product-list">
+      <h2>All Products</h2>
       <ProductList :data="productList" :is-loading="isLoading" />
     </div>
   </div>
