@@ -36,4 +36,9 @@ export default defineNuxtConfig({
     pageTransition: { name: "page", mode: "out-in" },
     layoutTransition: { name: "layout", mode: "out-in" },
   },
+  // set rendering rule
+  routeRules: {
+    // client rendering
+    "/shop": { ssr: false },
+  },
 });
