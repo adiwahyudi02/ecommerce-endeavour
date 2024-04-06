@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Banner :data="banners" />
     <ProductHighestCommission
       :data="highestCommissionProducts"
       :is-loading="isLoading && !highestCommissionProducts.length"
@@ -35,6 +36,21 @@ useServerSeoMeta({
   ogLocale: () => SEO_META.ogLocale,
   ogType: () => SEO_META.ogType as "website",
 });
+
+const banners = [
+  {
+    src: "/images/banner-1.jpg",
+    alt: "banner image 1",
+  },
+  {
+    src: "/images/banner-2.jpg",
+    alt: "banner image 2",
+  },
+  {
+    src: "/images/banner-3.jpg",
+    alt: "banner image 3",
+  },
+];
 
 const store = useProductsStore();
 const {
