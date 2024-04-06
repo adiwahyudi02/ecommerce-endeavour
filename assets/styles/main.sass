@@ -28,3 +28,15 @@ a
 
 .swiper-pagination-bullet
   --swiper-theme-color: black
+
+// Global page & layout transition
+.page,
+.layout
+  &-enter-active,
+  &-leave-active
+    transition: all 0.4s
+
+  &-enter-from,
+  &-leave-to
+    opacity: 0
+    filter: blur(1rem)
