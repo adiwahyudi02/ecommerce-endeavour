@@ -43,7 +43,7 @@ withDefaults(defineProps<IBannerSliderProps>(), {
 <style lang="sass" scoped>
 .swiper
   &__image
-    width: 100%
+    width: 99%
     height: 32rem
     object-fit: cover
     border: 3px solid $black-300
