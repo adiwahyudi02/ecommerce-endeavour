@@ -19,6 +19,8 @@ export default defineNuxtConfig({
   css: [
     // main style
     "@/assets/styles/main.sass",
+    // toast
+    "vue-toastification/dist/index.css",
   ],
   components: [
     // custom scanner for component auto-import
@@ -29,4 +31,5 @@ export default defineNuxtConfig({
     "~/components",
   ],
   modules: ["@nuxt/image", "nuxt-icon", "nuxt-swiper", "@pinia/nuxt"],
+  build: { transpile: ["vue-toastification"] },
 });
