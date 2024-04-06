@@ -18,6 +18,24 @@
 </template>
 
 <script setup lang="ts">
+import { SEO_META } from "~/constants/seoMeta";
+
+const {
+  public: { urlBase, websiteName },
+} = useRuntimeConfig();
+
+const title = `Catalog | ${websiteName}`;
+
+useServerSeoMeta({
+  ogTitle: () => title,
+  title: () => title,
+  description: () => SEO_META.description,
+  ogDescription: () => SEO_META.description,
+  ogUrl: () => urlBase,
+  ogLocale: () => SEO_META.ogLocale,
+  ogType: () => SEO_META.ogType as "website",
+});
+
 const store = useProductsStore();
 const {
   fetchNextPageProducts,

@@ -4,6 +4,8 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       apiBase: "https://ecommerce-endeavour-api.vercel.app",
+      urlBase: "https://ecommerce-endeavour.vercel.app",
+      websiteName: "ecommerce endeavour",
     },
   },
   vite: {
@@ -35,6 +37,12 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: "page", mode: "out-in" },
     layoutTransition: { name: "layout", mode: "out-in" },
+
+    // set global head
+    head: {
+      charset: "utf-8",
+      viewport: "width=device-width, initial-scale=1",
+    },
   },
   // set rendering rule
   routeRules: {
