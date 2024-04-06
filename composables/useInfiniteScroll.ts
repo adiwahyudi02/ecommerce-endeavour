@@ -13,7 +13,7 @@ export function useInfiniteScroll({
       document.documentElement.scrollTop || document.body.scrollTop;
     const clientHeight = document.documentElement.clientHeight;
 
-    if (scrollTop + clientHeight >= scrollHeight - 50 && isShouldFetch) {
+    if (scrollTop + clientHeight >= scrollHeight - 150 && isShouldFetch) {
       fetchNextPage();
     }
   };
